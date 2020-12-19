@@ -1,0 +1,29 @@
+name: main
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+
+jobs:
+  ikuy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: 'Set up Python 3.6'
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.6
+      - name: 'install dependencies'
+        run: pip install requests
+      
+      - name: 'start'
+        env:
+          FOLDER: ${{ secrets.FOLDER }}
+          SCKEY: ${{ secrets.SCKEY }}
+          USERNAME: ${{ secrets.USERNAME }}
+          PASSWORD: ${{ secrets.PASSWORD }}
+        run: python main.py          
