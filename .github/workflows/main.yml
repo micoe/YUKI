@@ -9,7 +9,7 @@ on:
 
 
 jobs:
-  ikuy:
+  yuki:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -22,8 +22,8 @@ jobs:
       
       - name: 'start'
         env:
-          FOLDER: ${{ secrets.FOLDER }}
-          SCKEY: ${{ secrets.SCKEY }}
-          USERNAME: ${{ secrets.USERNAME }}
-          PASSWORD: ${{ secrets.PASSWORD }}
+          FOLDER: ${{ secrets.YUKI_FOLDER }}
+          SCKEY: ${{ secrets.YUKI_SCKEY }}
+          USERNAME: ${{ secrets.YUKI_USERNAME }}
+          PASSWORD: ${{ secrets.YUKI_PASSWORD }}
         run: python main.py          
