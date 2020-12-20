@@ -38,7 +38,7 @@ def send():
     q = s.post('https://www.yukizq.com/api/yuki/query_task_1')
     a = q.json()['data']['data']
     if a:
-        requests.get('https://sc.ftqq.com/' + sckey + '.send?text=YUKI接到单了点击查看&desp=' + a['createDate'] + '\n\n' + a['pickDate'] + '\n\n' + a['goodprice'] + '\n\n' + a['keyWord'] + '\n\n' + a['remark'] + '\n\n![logo](' + a['picture'] + ')')
+        requests.get('https://sc.ftqq.com/' + sckey + '.send?text=YUKI接到单了点击查看&desp=' + a['createDate'] + '\n\n' + a['pickDate'] + '\n\n' + str(a['goodprice']) + '\n\n' + a['keyWord'] + '\n\n' + a['remark'] + '\n\n![logo](' + a['picture'] + ')')
         s.post('https://yukizq.com/api/yuki/oktaskremark', headers={'Content-Type': 'application/json'},data=json.dumps({"taskId":a['taskId']}))
 
 
