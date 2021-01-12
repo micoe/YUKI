@@ -5,7 +5,7 @@
 
 ```
 YUKI_FOLDER // 远控蓝奏云文件夹链接
-YUKI_SCKEY // 微信server酱通知sckey
+YUKI_TOKEN // 微信pushplus通知token
 YUKI_USERNAME // 账号
 YUKI_PASSWORD // 密码
 ```
