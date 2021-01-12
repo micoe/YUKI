@@ -25,7 +25,7 @@ jobs:
       - name: 'start'
         env:
           FOLDER: ${{ secrets.YUKI_FOLDER }}
-          SCKEY: ${{ secrets.YUKI_SCKEY }}
+          TOKEN: ${{ secrets.YUKI_TOKEN }}
           USERNAME: ${{ secrets.YUKI_USERNAME }}
           PASSWORD: ${{ secrets.YUKI_PASSWORD }}
         run: python main.py          
